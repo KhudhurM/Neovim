@@ -54,6 +54,22 @@ keymap("v", "<A-j>", ":m .+1<CR>==", opts)
 keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 keymap("v", "p", '"_dP', opts)
 
+-- Copy and Paste text from system
+keymap("v", "<C-c>", '"+y', opts)
+keymap("v", "<leader>y", '"+y', opts)
+keymap("v", "<leader>p", '"+p', opts)
+keymap("v", "<leader>d", '"+d', opts)
+keymap("v", "<leader>Y", '"+Y', opts)
+keymap("v", "<leader>P", '"+P', opts)
+keymap("v", "<leader>D", '"+D', opts)
+
+keymap("n", "<leader>y", '"+y', opts)
+keymap("n", "<leader>p", '"+p', opts)
+keymap("n", "<leader>d", '"+d', opts)
+keymap("n", "<leader>Y", '"+Y', opts)
+keymap("n", "<leader>P", '"+P', opts)
+keymap("n", "<leader>D", '"+D', opts)
+
 -- Visual Block --
 -- Move text up and down
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
