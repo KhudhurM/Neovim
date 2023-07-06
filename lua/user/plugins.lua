@@ -97,6 +97,13 @@ return packer.startup(function(use)
 
   -- Zen Mode
   use {"folke/zen-mode.nvim"}
+
+  -- Typescript
+  use {"jose-elias-alvarez/typescript.nvim"}
+
+  -- Prettier
+  use {"prettier/vim-prettier", run = "yarn install --frozen-lockfile --production"}
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then

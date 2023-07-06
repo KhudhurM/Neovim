@@ -28,6 +28,11 @@ vim.cmd [[
     autocmd!
     autocmd User AlphaReady set showtabline=0 | autocmd BufUnload <buffer> set showtabline=2
   augroup end
+
+  augroup _auto_format_prettier
+    autocmd!
+    autocmd BufWritePre * Prettier
+  augroup end
 ]]
 
 -- Autoformat
