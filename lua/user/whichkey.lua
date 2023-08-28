@@ -137,6 +137,10 @@ local mappings = {
       "<cmd>Telescope diagnostics bufnr=0<cr>",
       "Document Diagnostics",
     },
+    D = {
+      "<cmd>lua vim.diagnostic.open_float()<cr>",
+      "Line diagnostics",
+    },
     w = {
       "<cmd>Telescope diagnostics<cr>",
       "Workspace Diagnostics",
@@ -145,7 +149,7 @@ local mappings = {
     i = { "<cmd>LspInfo<cr>", "Info" },
     I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
     j = {
-      "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>",
+      "<cmd>lua vim.lsp.diagnostic.goto_next()<cr>",
       "Next Diagnostic",
     },
     k = {
@@ -180,6 +184,15 @@ local mappings = {
     i = { "<cmd>TypescriptRemoveUnused<cr>", "Auto import" },
     o = { "<cmd>TypescriptOrganizeImports<cr>", "Organize imports" },
   },
+
+  d = {
+    name = "Debug",
+    s = { "<cmd>lua require'dapui'.toggle()<cr>", "Start" },
+    b = {"<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Toggle Breakpoint"},
+    c = {"<cmd>lua require'dap'.continue()<cr>", "Continue"},
+    i = {"<cmd>lua require'dap'.step_into()<cr>", "Step Into"},
+    o = {"<cmd>lua require'dap'.step_over()<cr>", "Step Over"},
+  }
 
 
 }
